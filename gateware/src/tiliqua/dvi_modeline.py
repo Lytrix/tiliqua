@@ -110,6 +110,68 @@ class DVIModeline:
                 pixel_clk_mhz = 74.25,
             ),
 
+            # These timings are really pushing it - beyond
+            # what the hardware is specced. They generally
+            # fail to meet timings but still work!
+
+            "1600x900p60": DVIModeline(
+                h_active      = 1600,
+                h_sync_start  = 1624,
+                h_sync_end    = 1704,
+                h_total       = 1800,
+                h_sync_invert = False,
+                v_active      = 900,
+                v_sync_start  = 901,
+                v_sync_end    = 904,
+                v_total       = 1000,
+                v_sync_invert = False,
+                pixel_clk_mhz = 108.0,
+            ),
+
+            "1280x1024p60": DVIModeline(
+                h_active      = 1280,
+                h_sync_start  = 1328,
+                h_sync_end    = 1440,
+                h_total       = 1688,
+                h_sync_invert = False,
+                v_active      = 1024,
+                v_sync_start  = 1025,
+                v_sync_end    = 1028,
+                v_total       = 1066,
+                v_sync_invert = False,
+                pixel_clk_mhz = 108.0,
+            ),
+
+            # CVT-RBv2 (works on most boards)
+            "1920x1080p50": DVIModeline(
+                h_active      = 1920,
+                h_sync_start  = 1928,
+                h_sync_end    = 1960,
+                h_total       = 2000,
+                h_sync_invert = False,
+                v_active      = 1080,
+                v_sync_start  = 1092,
+                v_sync_end    = 1100,
+                v_total       = 1106,
+                v_sync_invert = True,
+                pixel_clk_mhz = 110.599,
+            ),
+
+            # CVT-RBv2 (works on rare boards)
+            "1920x1080p60": DVIModeline(
+                h_active      = 1920,
+                h_sync_start  = 1928,
+                h_sync_end    = 1960,
+                h_total       = 2000,
+                h_sync_invert = False,
+                v_active      = 1080,
+                v_sync_start  = 1097,
+                v_sync_end    = 1105,
+                v_total       = 1111,
+                v_sync_invert = True,
+                pixel_clk_mhz = 133.32,
+            ),
+
             # BEGIN ODDBALL TIMINGS
 
             # A round AliExpress display
